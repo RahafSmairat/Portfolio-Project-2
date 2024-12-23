@@ -39,7 +39,7 @@ header {
       box-shadow: none !important;
     }
   }
- 
+
   // Navbar Links
   .nav-link {
     margin-left: 3.0625rem;
@@ -49,7 +49,6 @@ header {
     font-size: variables.$small;
     padding: 0;
     &:hover {
-      // text-decoration: overline 2px variables.$hilights-color;
       text-shadow: variables.$light-shadow;
       box-shadow: 0 0 10px 1px variables.$hilights-color;
       border-radius: 10%;
@@ -111,12 +110,12 @@ header {
       text-shadow: none;
       .lightQoute {
         text-shadow: variables.$light-shadow;
-        // transition: text-shadow 3s;
       }
     }
   }
 }
 
+// Animations
 @keyframes typing {
   from {
     width: 0;
@@ -140,7 +139,6 @@ header {
 #qoute {
   .lightQoute {
     text-shadow: variables.$light-shadow;
-    // transition: text-shadow 3s;
   }
 
   p {
@@ -157,10 +155,11 @@ header {
 
     &:nth-child(2) {
       visibility: hidden;
-      animation: typing 4s steps(200, end) 4s forwards, blinking 0.75s 5s 2;
+      animation: typing 4s steps(200, end) 4s forwards, blinking 0.2s 5s 1;
     }
   }
 }
+
 // Social icons
 .hero-icons {
   display: flex;
@@ -179,7 +178,7 @@ header {
   }
 }
 
-// Media Query
+///////////////////// Media Queries /////////////////////
 @media screen and (max-width: 425px) {
   #qoute {
     display: none;

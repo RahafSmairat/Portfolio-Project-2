@@ -1,7 +1,7 @@
 @use "variables.scss";
 
 .footer-section {
-  margin: 20% 0 0 0;
+  margin: 14% 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,10 +42,6 @@
       font-size: 0.9rem;
       text-decoration: none;
       a:hover {
-        // text-decoration: overline 2px variables.$hilights-color;
-        // text-shadow: variables.$light-shadow;
-        // color: variables.$font-color;
-
         box-shadow: 0 0 10px 1px variables.$hilights-color;
         border-radius: 10%;
       }
@@ -76,7 +72,7 @@
   }
 }
 
-// Media Queries
+///////////////////// Media Queries /////////////////////
 @media screen and (max-width: 425px) {
   .footer-section {
     margin-top: 20%;
