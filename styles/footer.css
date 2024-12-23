@@ -1,0 +1,94 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Kode+Mono:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tilt+Prism&display=swap");
+/*Font Family */
+/* Font Weight */
+/* Colors */
+/* Font Sizes */
+/* Shadows */
+.footer-section {
+  margin: 20% 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-section hr {
+  border: none;
+  height: 5px;
+  width: 95%;
+  margin-bottom: 3%;
+  background-color: #e188b4;
+  box-shadow: 0 0 10px #e188b4, 0 0 20px #e188b4, 0 0 30px #e188b4, 0 0 40px #e188b4;
+}
+.footer-section footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 20px;
+  width: 100%;
+}
+.footer-section footer ul {
+  list-style-type: none;
+}
+.footer-section footer iframe {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+.footer-section footer li,
+.footer-section footer a {
+  color: #fbe4d8;
+  font-family: "JetBrains Mono", serif;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.footer-section footer li a:hover,
+.footer-section footer a a:hover {
+  box-shadow: 0 0 10px 1px #e188b4;
+  border-radius: 10%;
+}
+.footer-section footer li {
+  padding-bottom: 1rem;
+}
+.footer-section footer .icon:hover {
+  box-shadow: 0 0 10px 1px #e188b4;
+  border-radius: 30%;
+}
+.footer-section .copyright {
+  color: #fbe4d8;
+  font-family: "JetBrains Mono", serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 1%;
+  background-color: black;
+  width: 100%;
+}
+
+@media screen and (max-width: 425px) {
+  .footer-section {
+    margin-top: 20%;
+  }
+  .footer-section .navbar-brand {
+    padding: 0 0 10% 0;
+    margin: 0;
+    font-size: 1.2rem !important;
+  }
+  .footer-section footer {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+  .footer-section footer ul {
+    padding: 0;
+  }
+  .footer-section footer .footer-column {
+    align-items: center;
+  }
+  .footer-section footer .footer-column li,
+  .footer-section footer .footer-column a {
+    font-size: 0.8rem;
+  }
+  .footer-section footer iframe {
+    width: 80%;
+  }
+}/*# sourceMappingURL=footer.css.map */

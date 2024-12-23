@@ -1,0 +1,108 @@
+@use "variables.scss";
+
+.footer-section {
+  margin: 20% 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // Horizentel line
+  hr {
+    border: none;
+    height: 5px;
+    width: 95%;
+    margin-bottom: 3%;
+    background-color: variables.$hilights-color;
+    box-shadow: 0 0 10px variables.$hilights-color,
+      0 0 20px variables.$hilights-color, 0 0 30px variables.$hilights-color,
+      0 0 40px variables.$hilights-color;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 20px;
+    width: 100%;
+
+    ul {
+      list-style-type: none;
+    }
+
+    iframe {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+    }
+
+    li,
+    a {
+      color: variables.$font-color;
+      font-family: variables.$links-font-family;
+      font-size: 0.9rem;
+      text-decoration: none;
+      a:hover {
+        // text-decoration: overline 2px variables.$hilights-color;
+        // text-shadow: variables.$light-shadow;
+        // color: variables.$font-color;
+
+        box-shadow: 0 0 10px 1px variables.$hilights-color;
+        border-radius: 10%;
+      }
+    }
+
+    li {
+      padding-bottom: 1rem;
+    }
+
+    .icon {
+      &:hover {
+        box-shadow: 0 0 10px 1px variables.$hilights-color;
+        border-radius: 30%;
+      }
+    }
+  }
+
+  // Copyright
+  .copyright {
+    color: variables.$font-color;
+    font-family: variables.$links-font-family;
+    font-size: 0.7rem;
+    font-weight: variables.$regular;
+    text-align: center;
+    padding: 1%;
+    background-color: black;
+    width: 100%;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: 425px) {
+  .footer-section {
+    margin-top: 20%;
+    .navbar-brand {
+      padding: 0 0 10% 0;
+      margin: 0;
+      font-size: 1.2rem !important;
+    }
+    footer {
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+
+      ul {
+        padding: 0;
+      }
+      .footer-column {
+        align-items: center;
+        li,
+        a {
+          font-size: 0.8rem;
+        }
+      }
+      iframe {
+        width: 80%;
+      }
+    }
+  }
+}

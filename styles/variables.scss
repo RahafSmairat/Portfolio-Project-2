@@ -1,0 +1,31 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Kode+Mono:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tilt+Prism&display=swap");
+
+/*Font Family */
+$body-font-family: "Montserrat", serif;
+$logo-font-family: "Kode Mono", serif;
+$links-font-family: "JetBrains Mono", serif;
+$numbers-font-family: "Tilt Prism", serif;
+
+/* Font Weight */
+$semi-bold: 600;
+$bold: 700;
+$meduim: 500;
+$regular: 400;
+
+/* Colors */
+$body-bgcolor: #1c0415;
+$font-color: #fbe4d8;
+$hilights-color: #e188b4;
+$primary-color: #3b1c32;
+
+/* Font Sizes */
+$main-heading: 4rem;
+$section-heading: 2rem;
+$sub-heading: 1.5rem;
+$small: 1rem;
+$big-p: 1.2rem;
+
+/* Shadows */
+$light-shadow: 0 0 10px $font-color;
+$pink-shadow: 0 0 10px $hilights-color;
