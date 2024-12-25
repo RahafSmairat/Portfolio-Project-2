@@ -234,6 +234,28 @@ section {
   color: #fbe4d8;
 }
 
+.form-section {
+  display: flex;
+  flex-direction: column;
+}
+.form-section button {
+  background-color: #3b1c32;
+  border: 2px solid #e188b4;
+  color: #e188b4;
+  width: 20%;
+  margin-top: 5%;
+  align-self: center;
+  height: 70px;
+  border-radius: 32px;
+  box-shadow: 0 0 10px #fbe4d8;
+  font-family: "Montserrat", serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.form-section button:hover {
+  background-color: #e188b4;
+  color: #3b1c32;
+}
 .form-section form {
   margin-top: 76px;
   display: flex;
@@ -246,7 +268,7 @@ section {
   color: #fbe4d8;
   background-color: black;
   border: 2px solid #fbe4d8;
-  height: 98px;
+  height: 70px;
   border-radius: 32px;
   box-shadow: 0 0 10px #fbe4d8;
   padding: 5%;
@@ -288,24 +310,6 @@ section {
 }
 .form-section form .form-msg textarea {
   height: 340px;
-}
-.form-section form .form-msg button {
-  background-color: #3b1c32;
-  border: 2px solid #e188b4;
-  color: #e188b4;
-  width: 50%;
-  margin-top: 5%;
-  align-self: center;
-  height: 98px;
-  border-radius: 32px;
-  box-shadow: 0 0 10px #fbe4d8;
-  font-family: "Montserrat", serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-.form-section form .form-msg button:hover {
-  background-color: #e188b4;
-  color: #3b1c32;
 }
 
 .home {
@@ -425,6 +429,11 @@ section {
   }
   .form-section {
     margin: 20% 0 0 0;
+  }
+  .form-section button {
+    font-size: 1rem;
+    width: 30%;
+    height: 50px;
   }
   .form-section form {
     margin-top: 15%;
