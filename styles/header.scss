@@ -37,26 +37,64 @@ header {
       outline: none !important;
       box-shadow: none !important;
     }
+    .navbar-toggler-icon{
+      background-image: url('/images/menu.png');
+    }
   }
 
   // Navbar Links
+  // .nav-link {
+  //   margin-left: 3.0625rem;
+  //   color: variables.$font-color !important;
+  //   font-family: variables.$links-font-family;
+  //   font-weight: variables.$meduim;
+  //   font-size: variables.$small;
+  //   padding: 0;
+  //   &:hover {
+  //     text-shadow: variables.$light-shadow;
+  //     box-shadow: 0 0 10px 1px variables.$hilights-color;
+  //     border-radius: 10%;
+  //   }
+  // }
+
   .nav-link {
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
     margin-left: 3.0625rem;
     color: variables.$font-color !important;
     font-family: variables.$links-font-family;
     font-weight: variables.$meduim;
     font-size: variables.$small;
-    padding: 0;
+    padding: 0 !important;
+    margin-right: .5rem !important;
     &:hover {
       text-shadow: variables.$light-shadow;
-      box-shadow: 0 0 10px 1px variables.$hilights-color;
-      border-radius: 10%;
+    }
+    &::before {
+      transition: 300ms;
+      height: 3px;
+      content: "";
+      position: absolute;
+      top:25px;
+      background-color: variables.$hilights-color;
+      box-shadow: variables.$pink-shadow;
     }
   }
-
+        
   // Icons on collapse
   .collapse-hero-icons {
     display: none;
+  }
+}
+
+.link-hover{
+  &::before {
+    width: 0%;
+    bottom: 10px;
+  }
+  &:hover::before {
+    width: 100%;
   }
 }
 
@@ -99,7 +137,7 @@ header {
     p {
       font-size: variables.$sub-heading;
       font-weight: variables.$bold;
-      text-shadow: variables.$light-shadow;
+      // text-shadow: variables.$light-shadow;
     }
 
     .qoute {
@@ -112,6 +150,7 @@ header {
       }
     }
   }
+  
 }
 
 // Animations
@@ -169,6 +208,7 @@ header {
   .icon {
     margin-bottom: 22px;
     padding: 5px;
+    position: relative;
     &:hover {
       transform: scale(1.1);
       box-shadow: 0 0 10px 1px variables.$hilights-color;
@@ -188,14 +228,17 @@ header {
   }
   header {
     height: 300px;
+    overflow: visible;
     &::before {
       height: 100%;
+      border-radius: 0 0 100% 100% / 0 0 100% 100%;
+      // border-radius: 0;
+      transform: none;
     }
     .navbar {
-      padding: 1rem 1rem 1rem 1rem !important;
-      background-color: variables.$primary-color !important;
+      padding: 1rem 0 1rem 0 !important;
+      background: linear-gradient(0deg, rgba(59,28,50,1) 0%, rgba(28,4,21,1) 100%) !important;
       .collapse-hero-icons {
-        border-top: 1px solid variables.$hilights-color;
         display: flex;
         flex-direction: row;
         &:hover {
@@ -208,22 +251,44 @@ header {
         }
       }
     }
+      
+    // .navbar-collapse {
+    //   // background-color: variables.$primary-color;
+    //   padding-top: 5%;
+    //   padding-bottom: 5.5%;
+    //   height: 55vh;
+    //   transition: all 0.5s;
+    //   align-content: center;
+    //   ////
+    //   // position: absolute;
+    //   // top: 0;
+    //   // left: 0;
+    //   // right: 0;
+    //   // height: 100vh;
+    //   // display: flex;
+    //   // align-items: center;
+    //   // justify-content: center;
+    //   // text-align: center;
+    //   /// 
+    // }
+    // .collapse {
+    //   background-color: variables.$primary-color;
+    //   z-index: 2;
+    //   // width: 100%;
+    // }
+    .nav-item{
+      &:not(:first-child){
+        border-top: 1px solid variables.$hilights-color;
+      }
+      
+      padding: 10px 0;
+      .nav-link {
+        margin-left: 0px !important;
+        font-size: 1rem !important;
+        padding: 5px !important;
+      }
+    }
 
-    .navbar-collapse {
-      background-color: variables.$primary-color;
-      padding-top: 5%;
-    }
-    .collapse {
-      background-color: variables.$primary-color;
-      z-index: 2;
-      width: 100%;
-    }
-    .nav-link {
-      margin-left: 0px !important;
-      border-top: 1px solid variables.$hilights-color;
-      font-size: 1rem !important;
-      padding: 5px !important;
-    }
 
     .hero {
       justify-content: center;

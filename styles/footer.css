@@ -40,18 +40,31 @@
   font-family: "JetBrains Mono", serif;
   font-size: 0.9rem;
   text-decoration: none;
+  position: relative;
 }
-.footer-section footer li a:hover,
-.footer-section footer a a:hover {
-  box-shadow: 0 0 10px 1px #e188b4;
-  border-radius: 10%;
+.footer-section footer li a:not([data-attr=logo]),
+.footer-section footer a a:not([data-attr=logo]) {
+  text-transform: uppercase;
+}
+.footer-section footer li:hover,
+.footer-section footer a:hover {
+  text-shadow: 0 0 10px #fbe4d8;
+}
+.footer-section footer li::before,
+.footer-section footer a::before {
+  transition: 300ms;
+  height: 3px;
+  content: "";
+  position: absolute;
+  top: 25px;
+  background-color: #e188b4;
+  box-shadow: 0 0 10px #e188b4;
 }
 .footer-section footer li {
   padding-bottom: 1rem;
 }
 .footer-section footer .icon:hover {
-  box-shadow: 0 0 10px 1px #e188b4;
-  border-radius: 30%;
+  transform: scale(1.1);
 }
 .footer-section .copyright {
   color: #fbe4d8;

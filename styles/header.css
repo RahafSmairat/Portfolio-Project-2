@@ -39,21 +39,43 @@ header::before {
   outline: none !important;
   box-shadow: none !important;
 }
+.navbar .navbar-toggler .navbar-toggler-icon {
+  background-image: url("/images/menu.png");
+}
 .navbar .nav-link {
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
   margin-left: 3.0625rem;
   color: #fbe4d8 !important;
   font-family: "JetBrains Mono", serif;
   font-weight: 500;
   font-size: 1rem;
-  padding: 0;
+  padding: 0 !important;
+  margin-right: 0.5rem !important;
 }
 .navbar .nav-link:hover {
   text-shadow: 0 0 10px #fbe4d8;
-  box-shadow: 0 0 10px 1px #e188b4;
-  border-radius: 10%;
+}
+.navbar .nav-link::before {
+  transition: 300ms;
+  height: 3px;
+  content: "";
+  position: absolute;
+  top: 25px;
+  background-color: #e188b4;
+  box-shadow: 0 0 10px #e188b4;
 }
 .navbar .collapse-hero-icons {
   display: none;
+}
+
+.link-hover::before {
+  width: 0%;
+  bottom: 10px;
+}
+.link-hover:hover::before {
+  width: 100%;
 }
 
 #logo {
@@ -93,7 +115,6 @@ header::before {
 .hero .heading p {
   font-size: 1.5rem;
   font-weight: 700;
-  text-shadow: 0 0 10px #fbe4d8;
 }
 .hero .heading .qoute {
   display: none;
@@ -151,6 +172,7 @@ header::before {
 .hero-icons .icon {
   margin-bottom: 22px;
   padding: 5px;
+  position: relative;
 }
 .hero-icons .icon:hover {
   transform: scale(1.1);
@@ -168,16 +190,18 @@ header::before {
   }
   header {
     height: 300px;
+    overflow: visible;
   }
   header::before {
     height: 100%;
+    border-radius: 0 0 100% 100%/0 0 100% 100%;
+    transform: none;
   }
   header .navbar {
-    padding: 1rem 1rem 1rem 1rem !important;
-    background-color: #3b1c32 !important;
+    padding: 1rem 0 1rem 0 !important;
+    background: linear-gradient(0deg, rgb(59, 28, 50) 0%, rgb(28, 4, 21) 100%) !important;
   }
   header .navbar .collapse-hero-icons {
-    border-top: 1px solid #e188b4;
     display: flex;
     flex-direction: row;
     gap: 25px;
@@ -189,18 +213,14 @@ header::before {
   header .navbar .collapse-hero-icons img {
     width: 30px;
   }
-  header .navbar-collapse {
-    background-color: #3b1c32;
-    padding-top: 5%;
+  header .nav-item {
+    padding: 10px 0;
   }
-  header .collapse {
-    background-color: #3b1c32;
-    z-index: 2;
-    width: 100%;
-  }
-  header .nav-link {
-    margin-left: 0px !important;
+  header .nav-item:not(:first-child) {
     border-top: 1px solid #e188b4;
+  }
+  header .nav-item .nav-link {
+    margin-left: 0px !important;
     font-size: 1rem !important;
     padding: 5px !important;
   }
